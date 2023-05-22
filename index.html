@@ -378,13 +378,17 @@ customElements.define('markdown-style', MarkdownStyle);</script><markdown-style 
       <li>Identify where to find pricing information on AWS services</li>
       <li>Recognize that alarms and alerts exist</li>
       <li>Identify how tags are used in cost allocation</li>
-    </ul><p align="right">(<a href="#course-module-4">back to module 1</a>)</p>
+    </ul><p align="right">(<a href="#course-module-4">back to module 4</a>)</p>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     <h2 id="aws-cli"><a class="anchor" aria-hidden="true" tabindex="-1" href="#aws-cli"><span class="octicon octicon-link"></span></a>AWS CLI</h2>
     <p><a name="awscli"></a></p>
     <h3 id="install"><a class="anchor" aria-hidden="true" tabindex="-1" href="#install"><span class="octicon octicon-link"></span></a>Install</h3>
     <p>Windows</p>
-    <pre class="language-powershell"><code class="language-powershell code-highlight"></code><div onclick="copied(this)" data-code="" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+    <pre class="language-powershell"><code class="language-powershell code-highlight"><span class="code-line line-number" line="1"><span class="token comment"># https://learn.microsoft.com/en-us/windows/package-manager/winget/</span>
+</span><span class="code-line line-number" line="2">winget install <span class="token operator">-</span>e <span class="token operator">--</span>id Amazon<span class="token punctuation">.</span>AWSCLI
+</span></code><div onclick="copied(this)" data-code="# https://learn.microsoft.com/en-us/windows/package-manager/winget/
+winget install -e --id Amazon.AWSCLI
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
     <p>Linux</p>
     <pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line line-number" line="1"><span class="token builtin class-name">cd</span> /tmp <span class="token operator">||</span> <span class="token builtin class-name">exit</span>
 </span><span class="code-line line-number" line="2"><span class="token function">curl</span> <span class="token string">"https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"</span> <span class="token parameter variable">-o</span> <span class="token string">"awscliv2.zip"</span>
@@ -398,8 +402,10 @@ unzip awscliv2.zip
 rm awscliv2.zip
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
     <h3 id="important-commands"><a class="anchor" aria-hidden="true" tabindex="-1" href="#important-commands"><span class="octicon octicon-link"></span></a>Important Commands</h3>
-    <pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line line-number" line="1">foo
-</span></code><div onclick="copied(this)" data-code="foo
+    <pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line line-number" line="1"><span class="token comment"># Get version</span>
+</span><span class="code-line line-number" line="2">aws <span class="token parameter variable">--version</span>
+</span></code><div onclick="copied(this)" data-code="# Get version
+aws --version
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre><p align="right">(<a href="#awscli">back to awscli</a>)</p>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     <h2 id="contributing"><a class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
@@ -430,8 +436,11 @@ rm awscliv2.zip
     <ul>
       <li><a href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html">AWS Glossary</a></li>
       <li><a href="https://d0.awsstatic.com/whitepapers/aws-overview.pdf">AWS Overview</a></li>
+      <li><a href="https://aws.amazon.com/about-aws/global-infrastructure/">AWS Global Infrastructure</a></li>
+      <li><a href="https://aws.amazon.com/about-aws/global-infrastructure/regions_az/">Regions and Availability Zones</a></li>
       <li><a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html">Amazon Compute</a></li>
       <li><a href="https://aws.amazon.com/console/">AWS Console</a></li>
+      <li><a href="https://aws.amazon.com/developer/tools/">Tools to Build on AWS</a></li>
       <li><a href="https://www.aws.training/">AWS Training Certification</a></li>
       <li><a href="https://explore.skillbuilder.aws/learn/course/8287">AWS Course</a></li>
       <li><a href="https://explore.skillbuilder.aws/learn/course/9449/exam-prep-aws-certified-cloud-practitioner-clf-c01">AWS Prep Course</a></li>
