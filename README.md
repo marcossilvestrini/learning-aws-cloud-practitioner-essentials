@@ -330,10 +330,13 @@ Project Link: [https://github.com/marcossilvestrini/learning-aws-cloud-practitio
 
 ## Acknowledgments
 
+* [AWS Glossary](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html)
+* [AWS Overview](https://d0.awsstatic.com/whitepapers/aws-overview.pdf)
+* [Amazon Compute](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html)
+* [AWS Console](https://aws.amazon.com/console/)
 * [AWS Training Certification](https://www.aws.training/)
 * [AWS Course](https://explore.skillbuilder.aws/learn/course/8287)
 * [AWS Prep Course](https://explore.skillbuilder.aws/learn/course/9449/exam-prep-aws-certified-cloud-practitioner-clf-c01)
-* [AWS Console](https://aws.amazon.com/console/)
 * [Simulated](https://www.itexams.com/info/AWS-Certified-Cloud-Practitioner)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
