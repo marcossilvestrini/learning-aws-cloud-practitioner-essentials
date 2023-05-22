@@ -266,7 +266,7 @@ Define the AWS Cloud and its value proposition
 * Recognize that alarms and alerts exist
 * Identify how tags are used in cost allocation
 
-<p align="right">(<a href="#course-module-4">back to module 1</a>)</p>
+<p align="right">(<a href="#course-module-4">back to module 4</a>)</p>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## AWS CLI
@@ -278,7 +278,8 @@ Define the AWS Cloud and its value proposition
 Windows
 
 ```powershell
-
+# https://learn.microsoft.com/en-us/windows/package-manager/winget/
+winget install -e --id Amazon.AWSCLI
 ```
 
 Linux
@@ -294,7 +295,8 @@ rm awscliv2.zip
 ### Important Commands
 
 ```sh
-foo
+# Get version
+aws --version
 ```
 
 <p align="right">(<a href="#awscli">back to awscli</a>)</p>
@@ -332,8 +334,11 @@ Project Link: [https://github.com/marcossilvestrini/learning-aws-cloud-practitio
 
 * [AWS Glossary](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html)
 * [AWS Overview](https://d0.awsstatic.com/whitepapers/aws-overview.pdf)
+* [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
+* [Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
 * [Amazon Compute](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html)
 * [AWS Console](https://aws.amazon.com/console/)
+* [Tools to Build on AWS](https://aws.amazon.com/developer/tools/)
 * [AWS Training Certification](https://www.aws.training/)
 * [AWS Course](https://explore.skillbuilder.aws/learn/course/8287)
 * [AWS Prep Course](https://explore.skillbuilder.aws/learn/course/9449/exam-prep-aws-certified-cloud-practitioner-clf-c01)

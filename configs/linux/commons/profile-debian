@@ -37,4 +37,4 @@ fi
 sudo timedatectl set-timezone America/Sao_Paulo
 
 # Install vscode extencions
-code --no-sandbox --user-data-dir /home/vagrant --install-extension amazonwebservices.aws-toolkit-vscode
+code --no-sandbox --user-data-dir /home/vagrant --install-extension amazonwebservices.aws-toolkit-vscode > /dev/null
