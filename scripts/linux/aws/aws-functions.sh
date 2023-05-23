@@ -25,9 +25,9 @@ JSON=security/.aws-secrets
 export AWS_DEFAULT_REGION="us-east-1"    
 
 # Functio for login in Azure Portal
-LoginAWSTerraform(){
-    echo "Set credential for $1"      
-    echo "Set credential for $1" >>"$LOGFUNCTIONS"
+LoginAWS(){
+    echo "Set credential for user $1"      
+    echo "Set credential for user $1" >>"$LOGFUNCTIONS"
     case $1 in
         "terraform")                
                 export AWS_ACCESS_KEY_ID=$(jq -r .terraform_access_key $JSON)
@@ -45,19 +45,12 @@ LoginAWSTerraform(){
     LOGIN="$(aws iam list-users | jq -r .Users[].UserName)"
     if [ "$LOGIN" == "$1" ] ;    
     then            
-        echo "Login in AWS with IAM [$LOGIN] has successfully!!!"      
-        echo "Login in AWS with IAM [$LOGIN] has successfully!!!" >>"$LOGFUNCTIONS"
+        echo "Login in AWS with IAM [$1:$LOGIN] has successfully!!!"      
+        echo "Login in AWS with IAM [$1:$LOGIN] has successfully!!!" >>"$LOGFUNCTIONS"
         echo "----------------------------------------------------"
    else 
-        echo "Login in AWS with IAM [$LOGIN] failed. This IAM user not found in AWS account. Please check in AWS Console"
-        echo "Login in AWS with IAM [$LOGIN] failed. This IAM user not found in AWS account. Please check in AWS Console" >>"$LOGFUNCTIONS"
+        echo "Login in AWS with IAM [$1:$LOGIN] failed. This IAM user not found in AWS account. Please check in AWS Console"
+        echo "Login in AWS with IAM [$1:$LOGIN] failed. This IAM user not found in AWS account. Please check in AWS Console" >>"$LOGFUNCTIONS"
         echo "----------------------------------------------------"
    fi
 }
-
-
-
-
-
-# Test access
-
