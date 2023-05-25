@@ -15,7 +15,6 @@ New-Item -ItemType File -Path $file -Force >$null
 Add-Content -Path $file -Value "Start Trigger Pipelines..."
 $start = Get-Date -Format "dd/MM/yyyy HH:mm:ss"
 Add-Content -Path $file -Value $start
-Start-Sleep 5
 Set-Location $repository
 git pull origin main
 git add .
