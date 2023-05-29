@@ -10,7 +10,7 @@
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# LEARNING AWS CLOUD PRACTITIONER ESSENTIALS - CLF-C01
+# LEARNING CLF-C01: AWS Certified Cloud Practitioner
 
 ![AWS Cloud Practitioner Essentials](images/aws-roadmap.png)
 
@@ -297,6 +297,17 @@ rm awscliv2.zip
 ```sh
 # Get version
 aws --version
+
+
+
+# Create EC2 instance
+aws ec2 run-instances \
+  --image-id ami-xxxxxxxx \
+  --count 1 \
+  --instance-type t2.micro \
+  --key-name MyKeyPair \
+  --security-group-ids sg-903004f8 \
+  --subnet-id subnet-6e7f829e
 ```
 
 <p align="right">(<a href="#awscli">back to awscli</a>)</p>
@@ -332,23 +343,36 @@ Project Link: [https://github.com/marcossilvestrini/learning-aws-cloud-practitio
 
 ## Acknowledgments
 
+### AWS Exams code
+
+![Exam map](images/exams.jpg)
+
 * [AWS Glossary](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html)
 * [AWS Overview](https://d0.awsstatic.com/whitepapers/aws-overview.pdf)
 * [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)
-* [Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
-* [Amazon Compute](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html)
-* [Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/vpc/)
-* [Cloud Storage on AWS](https://aws.amazon.com/products/storage/)
+* [AWS Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+* [AWS Compute](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html)
+* [AWS Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/vpc/)
+* [AWS Storage](https://aws.amazon.com/products/storage/)
 * [AWS Cloud Databases](https://aws.amazon.com/products/databases/)
-* [Security, Identity, and Compliance on AWS](https://aws.amazon.com/products/security/)
-* [Management and Governance on AWS](https://aws.amazon.com/products/management-and-governance/)
-* [Monitoring and Observability](https://aws.amazon.com/cloudops/monitoring-and-observability)
-* [Compliance and Auditing](https://aws.amazon.com/cloudops/compliance-and-auditing)
+* [AWS Security, Identity, and Compliance](https://aws.amazon.com/products/security/)
+* [AWS Management and Governance](https://aws.amazon.com/products/management-and-governance/)
+* [AWS Monitoring and Observability](https://aws.amazon.com/cloudops/monitoring-and-observability)
+* [AWS Compliance and Auditing](https://aws.amazon.com/cloudops/compliance-and-auditing)
 * [AWS Free Tier](https://aws.amazon.com/free/)
 * [AWS Pricing Calculator](https://calculator.aws/#/)
-* [Amazon EC2 pricing](https://aws.amazon.com/ec2/pricing/)
-* [Amazon S3 pricing](https://aws.amazon.com/s3/pricing/)
+* [AWS EC2 pricing](https://aws.amazon.com/ec2/pricing/)
+* [AWS S3 pricing](https://aws.amazon.com/s3/pricing/)
 * [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/)
+* [AWS Support Plans](https://aws.amazon.com/premiumsupport/)
+* [AWS Marketplace](https://aws.amazon.com/marketplace)
+* [AWS Knowledge](https://repost.aws/knowledge-center)
+* [AWS Cloud Adoption Framework](https://d1.awsstatic.com/whitepapers/aws_cloud_adoption_framework.pdf)
+* [AWS Snow Family](https://aws.amazon.com/snow/)
+* [Migration & Transfer on AWS](https://aws.amazon.com/products/migration-and-transfer/)
+* [AWS Cloud Essentials](https://aws.amazon.com/getting-started/cloud-essentials/)
+* [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected)
+* [AWS Architecture Center](https://aws.amazon.com/architecture)
 * [AWS Console](https://aws.amazon.com/console/)
 * [Tools to Build on AWS](https://aws.amazon.com/developer/tools/)
 * [AWS Training Certification](https://www.aws.training/)

@@ -115,5 +115,9 @@ fi
 TZ='America/Sao_Paulo'
 export TZ
 
+# Set aws auto completion
+export PATH=/usr/local/bin/:$PATH
+complete -C '/usr/local/bin/aws_completer' aws
+
 # Install vscode extencions
 #code /home/vagrant --install-extension ms-vscode.vscode-node-azure-pack

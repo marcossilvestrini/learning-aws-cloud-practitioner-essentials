@@ -36,5 +36,9 @@ fi
 #Set timezone
 sudo timedatectl set-timezone America/Sao_Paulo
 
+# Set aws auto completion
+export PATH=/usr/local/bin/:$PATH
+complete -C '/usr/local/bin/aws_completer' aws
+
 # Install vscode extencions
 code --no-sandbox --user-data-dir /home/vagrant --install-extension amazonwebservices.aws-toolkit-vscode > /dev/null
