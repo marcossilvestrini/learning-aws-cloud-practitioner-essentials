@@ -30,6 +30,7 @@ Set-Location $repository
 git config --global --add safe.directory $repository
 git config --global user.email "marcos.silvestrini@gmail.com"
 git config --global user.name "marcos.silvestrini"
+git pull origin main
 git add .
 git commit -m "Start Pepilines"
 git push origin main
