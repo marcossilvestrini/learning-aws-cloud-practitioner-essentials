@@ -80,7 +80,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ol9_server01.vm.provision "shell", name: "[USERDATA-BIND-MASTER.SH]", path: "../../scripts/linux/bind/userdata-bind-master.sh"
 
     # CONFIGURE PURE-FTP
-    ol9_server01.vm.provision "shell", path: "../../scripts/linux/pure-ftp/userdata-pureftp.sh"
+    ol9_server01.vm.provision "shell", name: "[USERDATA-PUREFTP.SH]", path: "../../scripts/linux/pure-ftp/userdata-pureftp.sh"
 
   end
 
@@ -117,13 +117,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     # SSH,FIREWALLD,SELINUX, UPDATES AND PROFILE
-    debian_client01.vm.provision "shell", path: "../../scripts/linux/commons/userdata-debian.sh"
+    debian_client01.vm.provision "shell", name:"[USERDATA-DEBIAN.SH]", path: "../../scripts/linux/commons/userdata-debian.sh"
 
     # SET PURE-FTP
-    debian_client01.vm.provision "shell", path: "../../scripts/linux/pure-ftp/userdata-pureftp.sh"
+    debian_client01.vm.provision "shell", name:"[USERDATA-PUREFTP.SH]", path: "../../scripts/linux/pure-ftp/userdata-pureftp.sh"
 
     # Install Azure CLI
-    debian_client01.vm.provision "shell", path: "../../scripts/linux/aws/userdata-aws.sh"
+    debian_client01.vm.provision "shell", name: "[USERDATA-AWS.SH]", path: "../../scripts/linux/aws/userdata-aws.sh"
 
   end
 
