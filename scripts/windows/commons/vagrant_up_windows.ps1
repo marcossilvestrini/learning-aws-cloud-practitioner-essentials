@@ -46,30 +46,26 @@ switch ($(hostname)) {
       $baseVagrantfile="F:\CERTIFICACAO\AWS Cloud Practitioner Essentials\vagrant\"
       $virtualboxFolder = "E:\Apps\VirtualBox"
       $virtualboxVMFolder = "E:\Servers\VirtualBox"
-
-      # VirtualBox home directory.
-      Start-Process -Wait -NoNewWindow -FilePath "$virtualboxFolder\VBoxManage.exe" `
-      -ArgumentList  @("setproperty", "machinefolder", "$virtualboxVMFolder")
-      # Vagrant home directory for downloadad boxes.
-      setx VAGRANT_HOME "$vagrantHome" >$null
+     
    }
    "silvestrini2" {      
       # Variables
       $vagrant="C:\Cloud\Vagrant\bin\vagrant.exe"
-      $vagrantHome = "C:\Cloud\Vagrant\.vagrant.d" 
-      $vagrantPK="C:\Cloud\Vagrant\vagrant-pk"
+      $vagrantHome = "C:\Cloud\Vagrant\.vagrant.d"       
+      $vagrantPK="F:\Projetos\vagrant-pk"
       $baseVagrantfile="F:\CERTIFICACAO\AWS Cloud Practitioner Essentials\vagrant\"      
       $virtualboxFolder = "C:\Program Files\Oracle\VirtualBox"
       $virtualboxVMFolder = "C:\Cloud\VirtualBox"
-
-      # VirtualBox home directory.
-      Start-Process -Wait -NoNewWindow -FilePath "$virtualboxFolder\VBoxManage.exe" `
-      -ArgumentList  @("setproperty", "machinefolder", "$virtualboxVMFolder")
-      # Vagrant home directory for downloadad boxes.
-      setx VAGRANT_HOME "$vagrantHome" >$null
+      
    }
    Default {Write-Host "This hostname is not available for execution this script!!!";exit 1}
 }
+
+# VirtualBox home directory.
+Start-Process -Wait -NoNewWindow -FilePath "$virtualboxFolder\VBoxManage.exe" `
+-ArgumentList  @("setproperty", "machinefolder", "$virtualboxVMFolder")
+# Vagrant home directory for downloadad boxes.
+setx VAGRANT_HOME "$vagrantHome" >$null
 
 # Up lab stack
 $lab = "$baseVagrantfile\linux"
