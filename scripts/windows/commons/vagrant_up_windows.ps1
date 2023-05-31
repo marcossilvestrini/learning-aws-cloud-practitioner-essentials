@@ -58,7 +58,7 @@ switch ($(hostname)) {
       $vagrant="C:\Cloud\Vagrant\bin\vagrant.exe"
       $vagrantHome = "C:\Cloud\Vagrant\.vagrant.d" 
       $vagrantPK="C:\Cloud\Vagrant\vagrant-pk"
-      $baseVagrantfile="C:\Users\marcos.silvestrini\OneDrive\Projetos\AWS Cloud Practitioner Essentials\vagrant"
+      $baseVagrantfile="F:\CERTIFICACAO\AWS Cloud Practitioner Essentials\vagrant\"      
       $virtualboxFolder = "C:\Program Files\Oracle\VirtualBox"
       $virtualboxVMFolder = "C:\Cloud\VirtualBox"
 
